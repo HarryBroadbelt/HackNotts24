@@ -1,5 +1,12 @@
 from nltk import word_tokenize
 
+grammar = {
+    '00': '+',
+    '01': '-',
+    '10': '*',
+    '11': '/'
+}
+
 tokens = []
 file = open('test.txt')
 charstream = str(file.readlines())
@@ -18,8 +25,8 @@ for word in words:
     elif word[0] == "'":
         word = word.replace("'", "")
         dec = int(word, 2)
-         out.append(dec)
+        out.append(dec)
     else:
-        out.append(word)
+        out.append(grammar[word])
 
 print(out)
