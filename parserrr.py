@@ -1,17 +1,31 @@
+from commands import *
 
 def parser(info):
     file = open("out.txt", "w")
     pos = 0
     startCount = 0
-    endCount = 0    
+    endCount = 0
+    varnum = 0
+    if(info[pos] != '1'):
+        raise Exception ("program needs start clause")
+    else:
+        startCount += 1
+    if(info[-1] != '0'):
+        raise Exception ("progam needs end clause")
+    else:
+        endCount += 1
     while(info != []):
-        if(info[pos] == 'start' and info[pos-1] != "if"):
+        pos += 1
+        if(info[pos] == 'start' and info[pos - 2] == "if"):
             startCount += 1
+        elif(info[pos] == 'end'):
+            endCount += 1
+        elif(grammar.get(info[pos]) != None):
+
         
 
-
-
-
+    if startCount != endCount:
+        raise Exception ("cry")
 
 
 
