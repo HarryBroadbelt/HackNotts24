@@ -1,0 +1,4 @@
+[Hello my name is hacknotts24. what option do you want? 1, 2 or 3?]
+1
+[good choice! now do you want an apple? Choose 12 or 45?]45
+[Another great choice!]
