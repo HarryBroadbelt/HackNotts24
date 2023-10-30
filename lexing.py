@@ -1,6 +1,7 @@
 from nltk import word_tokenize
 from commands import *
 from parserrr import *
+import binascii
 
 tokens = []
 file = open('test2.txt')
@@ -23,8 +24,8 @@ for word in words:
         out.append(dec)
     elif word[0] == "'":
         word = word.replace("'", "")
-        dec = int(word, 2)
-        out.append(dec)
+        new = binascii.b2a_uu(word.encode())
+        out.append(new)
     elif grammar.get(word) != None:
         out.append(grammar[word])
     else:
