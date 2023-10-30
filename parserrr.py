@@ -19,7 +19,7 @@ class Parser():
             elif char == "]":
                 nlp_text_found = False
                 continue
-            print(nlp_text_found)
+            # print(nlp_text_found)
             if nlp_text_found == False:
                 if char.isdigit():
                     self.__parsedCommands.append(int(char))
@@ -31,7 +31,7 @@ class Parser():
         print(self.__parsedCommands)
         reader = []
         for i in range(len(self.__parsedCommands)):
-            print("i am " + str(self.__parsedCommands[i])+ ".")
+            print(str(self.__parsedCommands[i]))
             if(self.__parsedCommands[i] != "\n"):
                 print("hi")
                 reader.append(str(self.__parsedCommands[i]))
