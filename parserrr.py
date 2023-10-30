@@ -1,26 +1,34 @@
 from commands import *
 
 def parser(info):
-    file = open("out.txt", "w")
+    file = open("out.py", "w")
     pos = 0
     startCount = 0
     endCount = 0
-    varnum = 0
-    if(info[pos] != '1'):
+    variables = []
+    if(info[0] != 'start'):
         raise Exception ("program needs start clause")
     else:
         startCount += 1
-    if(info[-1] != '0'):
+    if(info[-1] != 'end'):
         raise Exception ("progam needs end clause")
     else:
         endCount += 1
-    while(info != []):
+    while(pos <= len(info)):
         pos += 1
-        if(info[pos] == 'start' and info[pos - 2] == "if"):
+        word = info[pos]
+        if(word == 'start' and info[pos - 2] == "if"):
+            file.write("if")
             startCount += 1
-        elif(info[pos] == 'end'):
+        elif(word == 'end'):
             endCount += 1
-        elif(grammar.get(info[pos]) != None):
+        elif(word in grammar.values()):
+            file.write(word)
+        elif(isinstance(word, int)):
+            file.write(str(word))
+        else:
+            variables.append(word)
+            file.write("a" + str(len(variables)))
 
         
 
