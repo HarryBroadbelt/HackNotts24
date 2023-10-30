@@ -20,8 +20,8 @@ for word in words:
         word = word.replace("'", "")
         dec = int(word, 2)
         out.append(dec)
-    elif grammar[word] != None:
+    elif grammar.get(word) != None:
         out.append(grammar[word])
     else:
-        raise Exception ("error: unrecognised command")
+        out.append(word)
 print(out)
