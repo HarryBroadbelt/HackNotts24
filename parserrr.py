@@ -18,17 +18,25 @@ def parser(info):
         pos += 1
         word = info[pos]
         if(word == 'start' and info[pos - 2] == "if"):
-            file.write("if")
+            file.write("if ")
             startCount += 1
         elif(word == 'end'):
             endCount += 1
         elif(word in grammar.values()):
-            file.write(word)
+            file.write(word + " ")
         elif(isinstance(word, int)):
-            file.write(str(word))
+            file.write(str(word) + " ")
         else:
-            variables.append(word)
-            file.write("a" + str(len(variables)))
+            i = 0
+            for v in variables:
+                i += 1
+                if v == word:
+                    num = i
+            if i == 0:
+                variables.append(word)
+                file.write("a" + str(len(variables)) + " ")
+            else:
+                file.write("a" + str(i) + " ")
 
         
 

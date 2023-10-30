@@ -3,7 +3,7 @@ from commands import *
 from parserrr import *
 
 tokens = []
-file = open('test.txt')
+file = open('test2.txt')
 charstream = str(file.readlines())
 
 tokens = word_tokenize(charstream)
