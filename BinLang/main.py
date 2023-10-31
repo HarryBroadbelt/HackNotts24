@@ -1,3 +1,3 @@
 from lexing import *
 
-lexer('hello_world.txt')
+lexer('test2.txt')
