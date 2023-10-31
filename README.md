@@ -9,7 +9,3 @@ Our initial plan was to produce a generative text AI bot to create a text-based 
 ### Instructions of Use
 
 Write your Chicken script in the input file and then run the makefile to compile and execute your code.
-
-
-### Credits
-Bird, Steven, Edward Loper and Ewan Klein (2009), *Natural Language Processing with Python*. O'Reilly Media Inc.
