@@ -8,4 +8,4 @@ Our initial plan was to produce a generative text AI bot to create a text-based 
 
 ### Instructions of Use
 
-Write your BinLang script in the input test file using the given grammar as a guide, and then run the mail file to compile and execute your code.
+You need the main.py, lexing.py, parserrr.py and commands.py files on your system at the very least. Code written in BinLang is written in simple .txt files and the main.py is changed to reflect the filename (note: we should remove this step in the process somehow). Then main.py is run, which runs out.py on its own.
