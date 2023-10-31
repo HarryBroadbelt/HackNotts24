@@ -26,17 +26,18 @@ def parser(info):
         if(word == 'start'):
             file.write(":\n")
             indent += 1
-            i = indent
-            while i > 0:
-                i -= 1
-                file.write("\t")
             startCount += 1
         elif(word == 'end'):
             file.write("\n")
             indent -= 1
             endCount += 1
         elif(word == 'else' or word == 'if' or word == 'while'):
-            file.write("\n" + word + " ")
+            file.write("\n")
+            i = indent
+            while i > 0:
+                i -= 1
+                file.write("\t")
+            file.write(word + " ")
         elif(word == 'print'):
             bracket = True
             file.write("\n")
