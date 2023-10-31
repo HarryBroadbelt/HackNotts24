@@ -1,5 +1,10 @@
-a1 = 2 
-while a1 > 0 :
-	
-	print ("Hello")
-	a1 	= 	a1 	- 1 
+
+if a1 >= 2 :
+		a1 	= 	a1 	+ 1 
+	print (	a1 )
+
+
+else :
+		a1 	= 	- 1 
+
+print (a1 )
