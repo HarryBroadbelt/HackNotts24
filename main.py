@@ -6,7 +6,7 @@ import os
 from dungeon import *
 from shop import *
 from commands import *
-from parser import *
+from parserrr import *
 
 def main():
 
