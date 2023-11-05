@@ -26,39 +26,40 @@ def parser(info):
         if(word == 'start'):
             file.write(":\n")
             indent += 1
-            i = indent
-            while i > 0:
-                file.write("\t")
-                i -= 1
             startCount += 1
         elif(word == 'end'):
             file.write("\n")
             indent -= 1
             endCount += 1
         elif(word == 'else' or word == 'if' or word == 'while'):
-            file.write("\n" + word + " ")
+            file.write("\n")
+            i = indent
+            while i > 0:
+                i -= 1
+                file.write("\t")
+            file.write(word + " ")
         elif(word == 'print'):
             bracket = True
             file.write("\n")
             i = indent
             while i > 0:
-                file.write("\t")
                 i -= 1
+                file.write("\t")
             file.write(word + " (")
             continue
         elif(word in grammar.values()):
             i = indent
             while i > 0:
-                file.write("\t")
                 i -= 1
+                file.write("\t")
             file.write(word + " ")
         elif(isinstance(word, int)):
             file.write(str(word) + " ")
         elif(word[0] == '1' or word[0] == '0'):
             i = indent
             while i > 0:
-                file.write("\t")
                 i -= 1
+                file.write("\t")
             i = 0
             for v in variables:
                 i += 1
