@@ -1,9 +1,11 @@
-<<<<<<< HEAD
-while = ""* ""
-=======
-a1 = 2 
+a1 = 5 
 while a1 > 0 :
 	
-	print ("Hello")
-	a1 	= 	a1 	- 1 
->>>>>>> 5e6097bc7a858c43f42c016389903ca326979f1f
+if 	a1 	> 0 :
+				a1 		= 		a1 		+ 1 
+
+else :
+				a1 		= 		a1 		- 1 
+
+	print (	a1 )
+
