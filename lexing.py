@@ -3,7 +3,7 @@ from commands import *
 from parserrr import *
 
 tokens = []
-file = open('test2.txt')
+file = open('test.txt')
 charstream = str(file.readlines())
 
 tokens = word_tokenize(charstream)
@@ -30,4 +30,4 @@ for word in words:
     else:
         out.append(word)
 print(out)
-
+parser(out)
