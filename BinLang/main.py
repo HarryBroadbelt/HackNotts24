@@ -1,5 +1,5 @@
 from lexing import *
 import subprocess
 
-lexer('hello_world.txt')
+lexer('test.txt')
 subprocess.run(["python", "out.py"])
