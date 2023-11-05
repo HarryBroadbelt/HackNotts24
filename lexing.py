@@ -1,5 +1,6 @@
 from nltk import word_tokenize
 from commands import *
+from parserrr import *
 
 tokens = []
 file = open('test.txt')
@@ -25,3 +26,4 @@ for word in words:
     else:
         raise Exception ("error: unrecognised command")
 print(out)
+parser(out)
