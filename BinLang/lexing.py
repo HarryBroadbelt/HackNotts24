@@ -13,7 +13,6 @@ def lexer(testfile):
 
     strin = False
     wordsss = ""
-    print(words)
     for word in words:
         for c in range(0, len(word)):
             if (word[c]) not in ["1", "0", "'" ,"-"]:
@@ -42,5 +41,4 @@ def lexer(testfile):
             out.append(grammar[word])
         else:
             out.append(word)
-    print(out)
     parser(out)
