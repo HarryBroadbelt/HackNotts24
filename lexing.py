@@ -30,3 +30,4 @@ for word in words:
     else:
         out.append(word)
 print(out)
+
