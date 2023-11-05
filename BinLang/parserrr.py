@@ -7,8 +7,9 @@ def parser(info):
     endCount = 0
     variables = []
     bracket = False
+    indent = 0
     string = ''
-    inif = False
+    newline = False
     if(info[0] != 'start'):
         raise Exception ("program needs start clause")
     else:
@@ -23,26 +24,41 @@ def parser(info):
             break
         word = info[pos]
         if(word == 'start'):
-            file.write(":\n\t")
-            inif = True
+            file.write(":\n")
+            indent += 1
+            i = indent
+            while i > 0:
+                file.write("\t")
+                i -= 1
             startCount += 1
         elif(word == 'end'):
             file.write("\n")
+            indent -= 1
             endCount += 1
-        elif(word == 'else' or word == 'if'):
+        elif(word == 'else' or word == 'if' or word == 'while'):
             file.write("\n" + word + " ")
         elif(word == 'print'):
             bracket = True
             file.write("\n")
-            if inif == True:
+            i = indent
+            while i > 0:
                 file.write("\t")
+                i -= 1
             file.write(word + " (")
             continue
         elif(word in grammar.values()):
+            i = indent
+            while i > 0:
+                file.write("\t")
+                i -= 1
             file.write(word + " ")
         elif(isinstance(word, int)):
             file.write(str(word) + " ")
         elif(word[0] == '1' or word[0] == '0'):
+            i = indent
+            while i > 0:
+                file.write("\t")
+                i -= 1
             i = 0
             for v in variables:
                 i += 1
