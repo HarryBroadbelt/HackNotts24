@@ -52,7 +52,7 @@ def parser(info):
 
     if startCount != endCount:
         raise Exception ("cry")
-
+    file.close()
 
 
 
