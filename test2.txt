@@ -1,4 +1,1 @@
-[Hello my name is hacknotts24. what option do you want? 1, 2 or 3?]
-1
-[good choice! now do you want an egg? Choose 12 or 45?]45
-[Another great choice!]
+1 010 11111 110 -10- 11111 000 11111 00 -1- 011 11111 000 01 -1- 0
