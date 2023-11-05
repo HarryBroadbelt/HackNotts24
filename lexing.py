@@ -21,9 +21,14 @@ for word in words:
         word = word.replace("'", "")
         dec = int(word, 2)
         out.append(dec)
-    elif grammar[word] != None:
+    elif grammar.get(word) != None:
         out.append(grammar[word])
     else:
+<<<<<<< HEAD
         raise Exception ("error: unrecognised command")
 print(out)
 parser(out)
+=======
+        out.append(word)
+print(out)
+>>>>>>> 6ff1da255e4ef0dbf894c9c7ac3bebbe3af596b0
