@@ -1,6 +1,6 @@
 # HackNotts24
 
-## Welcome to our HackNotts24 project - Chicken and Egg
+## Welcome to our HackNotts24 project - BinLang
 
 Our esoteric programming language is known as BinLang!. It takes a binary input from the user and executes the command they have given via a .py file known as out.py.
 
