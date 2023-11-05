@@ -1,4 +1,3 @@
 run:
+	python main.py
 	python out.py
-
-setup: lexing.py parserrr.py
